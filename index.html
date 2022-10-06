@@ -1,0 +1,139 @@
+<!-- Link com todas as abreviações:
+docs.emmet.io/cheat-sheet/ -->
+
+<!-- Colocando "!!" ele gera automaticamente o corpo da pagina -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- colocando "link:css"  ele gera automaticamente o meu link para o css-->
+    <link rel="stylesheet" href="style.css">      
+</head>
+
+<!-- Dá pra fazer também com as propriedades do CSS -->
+
+<style>
+    body{
+        /* w100p */
+        width: 100%;
+
+        /* h100vg */
+        height: 100vh;
+
+        /* m10rem */
+        margin: 10rem;
+
+        /* p10p */
+        padding: 10%;
+
+        /* df */
+        display: flex;
+
+        /* db */
+        display: block;
+
+        /* dn */
+        display: none;
+
+        /* dg */
+        display: grid;
+
+        /* bg */
+        background: #000;
+
+        /* bgi */
+        background-image: url();
+        
+        /* bc */
+        background-color: #fff;
+
+        /* bgc */
+        background-color: #fff;
+    }
+</style>
+<body>
+
+    <!-- colocando "div.classe-um.classe-dois" ele cria automaticamente uma div com
+    duas classes -->
+
+    <div class="classe-um classe-dois"></div>
+    <!-- colocando "div#" ele cria automaticamente uma div com um ID -->
+    <div id="1"></div>
+    
+    <!-- colocando "div#MeuID.Minhaclasse.OutraClasse" 
+        ele cria automaticamente uma div com um ID e uma classe-->
+    <div id="MeuID" class="Minhaclasse OutraClasse"></div>
+
+    <!-- colocando "div#MeuID.Minha-classe.Outra-Classe{Aqui meu conteudo}" 
+    ele cria uma div com um ID e uma classe com o conteudo-->
+    
+    <div id="MeuID" class="Minha-classe Outra-Classe">Aqui meu conteudo</div>
+    
+     <!-- colocando "div#MeuID.Minha-classe.Outra-Classe{Aqui meu conteudo}*3" 
+    ele cria 3 div com um ID e uma classe com o conteudo-->
+
+    <div id="MeuID" class="Minha-classe Outra-Classe">Aqui meu conteudo</div>
+    <div id="MeuID" class="Minha-classe Outra-Classe">Aqui meu conteudo</div>
+    <div id="MeuID" class="Minha-classe Outra-Classe">Aqui meu conteudo</div>
+    
+    <!-- colocando "div#MeuID-$.Minha-classe.Outra-Classe{Aqui meu conteudo $}*3" 
+    ele cria 3 div com um ID e uma classe com o conteudo, colocando o "$" ele cria as 3
+    div com ids diferentes-->
+    
+    <div id="MeuID-1" class="Minha-classe Outra-Classe">Aqui meu conteudo 1</div>
+    <div id="MeuID-2" class="Minha-classe Outra-Classe">Aqui meu conteudo 2</div>
+    <div id="MeuID-3" class="Minha-classe Outra-Classe">Aqui meu conteudo 3</div>
+    
+    <!-- Colocar filhos em elementos
+    ul>li{conteudo $}*3 -->
+    <ul>
+        <li>Conteudo 1</li>
+        <li>Conteudo 2</li>
+        <li>Conteudo 3</li>
+    </ul>
+
+    
+    <!-- Colocar filhos em elementos agrupados
+    ul>(li>a{conteudo $})*3 -->
+
+    <ul>
+        <li><a href="">conteudo 1</a></li>
+        <li><a href="">conteudo 2</a></li>
+        <li><a href="">conteudo 3</a></li>
+    </ul>
+
+    <!-- Se eu quiser colocar já um link dentro do Href 
+    ul>(li>a{conteudo $}[href="http://link.com/Conteudo"])*3-->
+
+    <ul>
+        <li><a href="http://link.com/Conteudo">Conteudo 1</a></li>
+    </ul>
+
+    <!-- Fazendo desta forma "div.MinhaClasse#MeuID>h1{Conteudo}+(p{Com outro conteudo }>a{Clique aqui}[href="#home"]+{para saber mais })*2" 
+    Ele gera automaticamente uma div com uma classe e um iD contendo um H1 e um P adicionando
+    como filho do P o a-->
+
+    <div class="MinhaClasse" id="MeuID">
+        <h1>Conteudo</h1>
+        <p>Com outro conteudo <a href="#home">Clique aqui</a>para saber mais </p>
+        <p>Com outro conteudo <a href="#home">Clique aqui</a>para saber mais </p>
+    </div>
+ 
+    <!-- Posso criar também sem nenhum conteudo, só a estrutura  por exemplo:
+    "section>h1+div>(p>span)*3"-->
+
+    <section>
+        <h1></h1>
+        <div>
+            <p><span></span></p>
+            <p><span></span></p>
+            <p><span></span></p>
+        </div>
+    </section>
+</body>
+</html>
